@@ -1,0 +1,14 @@
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\bin\Debug\ProjetoMemoriaPrincipal-AlunosFatec.exe.config
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\bin\Debug\ProjetoMemoriaPrincipal-AlunosFatec.exe
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\bin\Debug\ProjetoMemoriaPrincipal-AlunosFatec.pdb
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal-AlunosFatec.csproj.AssemblyReference.cache
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.Login.resources
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.Properties.Resources.resources
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal-AlunosFatec.csproj.GenerateResource.cache
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal-AlunosFatec.csproj.CoreCompileInputs.cache
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal-AlunosFatec.exe
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal-AlunosFatec.pdb
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.ListaUsuarios.resources
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.PrimeiroCadastro.resources
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.TrocarSenha.resources
+C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\obj\Debug\ProjetoMemoriaPrincipal_AlunosFatec.DadosUsuario.resources

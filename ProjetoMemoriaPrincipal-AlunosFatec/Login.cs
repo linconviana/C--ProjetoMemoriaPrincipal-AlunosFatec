@@ -36,7 +36,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
 
         private void btnPrimeiroCadastro_Click(object sender, EventArgs e)
         {
-            PrimeiroCadastro cadastro = new PrimeiroCadastro(this);
+            PrimeiroCadastro cadastro = new PrimeiroCadastro(this, btnLogin, btnPrimeiroCadastro, btnMudarSenha);
             cadastro.Show();
             this.Visible = false;
         }

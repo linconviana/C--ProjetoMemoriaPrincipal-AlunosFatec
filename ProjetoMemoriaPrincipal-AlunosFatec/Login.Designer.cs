@@ -114,6 +114,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnMudarSenha.TabIndex = 7;
             this.btnMudarSenha.Text = "Esqueci a senha";
             this.btnMudarSenha.UseVisualStyleBackColor = true;
+            this.btnMudarSenha.Visible = false;
             this.btnMudarSenha.Click += new System.EventHandler(this.btnMudarSenha_Click);
             // 
             // Login

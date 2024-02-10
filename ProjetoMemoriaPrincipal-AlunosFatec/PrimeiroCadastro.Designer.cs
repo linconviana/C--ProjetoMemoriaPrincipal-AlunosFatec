@@ -50,7 +50,6 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.label3.Size = new System.Drawing.Size(176, 24);
             this.label3.TabIndex = 6;
             this.label3.Text = "Primeiro Cadastro";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnSalvar
             // 
@@ -89,7 +88,6 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Email:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtEmail
             // 
@@ -97,7 +95,6 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(288, 20);
             this.txtEmail.TabIndex = 11;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtSenha
             // 

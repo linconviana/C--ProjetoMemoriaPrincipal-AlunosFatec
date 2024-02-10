@@ -51,6 +51,7 @@
     <Compile Include="DadosUsuario.Designer.cs">
       <DependentUpon>DadosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="ListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,7 @@
     <Compile Include="TrocarSenha.Designer.cs">
       <DependentUpon>TrocarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.cs" />
     <Compile Include="utils\FecharJanelas.cs" />
     <EmbeddedResource Include="DadosUsuario.resx">
       <DependentUpon>DadosUsuario.cs</DependentUpon>

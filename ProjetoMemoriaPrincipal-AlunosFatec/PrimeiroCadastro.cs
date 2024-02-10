@@ -14,17 +14,25 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
     public partial class PrimeiroCadastro : Form
     {
         private Form login;
+        private Button primeiroCadastro;
+        private Button mudarSenha;
+        private Button btnLogin;
 
         public PrimeiroCadastro()
         {
             InitializeComponent();
         }
 
-        public PrimeiroCadastro(Form login)
+        public PrimeiroCadastro(Form login, Button btnLogin, Button primeiroCadastro, Button mudarSenha)
         {
             InitializeComponent();
 
             this.login = login;
+            this.primeiroCadastro = primeiroCadastro;
+            this.mudarSenha = mudarSenha;
+            this.btnLogin = btnLogin;
+
+            txtSenha.PasswordChar = '*';
         }
 
         private void PrimeiroCadastro_FormClosed(object sender, FormClosedEventArgs e)
@@ -34,24 +42,34 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Usuario salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.login.Visible = true;
-            this.Close();
-        }
+            if(!String.IsNullOrEmpty(txtNome.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtSenha.Text))
+            {
+                Usuarios usuario = new Usuarios();
+                usuario.id = 1;
+                usuario.nome = txtNome.Text.Trim();
+                usuario.email = txtEmail.Text.Trim();
+                usuario.senha = txtSenha.Text.Trim();
+                usuario.telefone = txtTelefone.Text.Trim();
+                usuario.imagem = string.Empty;
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
+                Global.ListaUsuarios.Add(usuario);
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+                MessageBox.Show("Usuario salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.login.Visible = true;
+                this.primeiroCadastro.Visible = false;
+                this.mudarSenha.Visible = true;
+                this.btnLogin.Location = new Point(210, 239);
+                this.Close();
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(txtNome.Text))
+                    MessageBox.Show("Nome do usuario é obrigatorio!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (String.IsNullOrEmpty(txtEmail.Text))
+                    MessageBox.Show("Email do usuario é obrigatorio!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (String.IsNullOrEmpty(txtSenha.Text))
+                    MessageBox.Show("Senha do usuario é obrigatorio!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

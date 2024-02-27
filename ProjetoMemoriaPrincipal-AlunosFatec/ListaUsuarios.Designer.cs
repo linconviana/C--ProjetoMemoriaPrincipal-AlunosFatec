@@ -29,6 +29,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaUsuarios));
             this.label3 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,15 +39,16 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabaleUsuarios = new System.Windows.Forms.DataGridView();
+            this.tabelaUsuarios = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnImagem = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.tabaleUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureImagem = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -127,13 +129,19 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.label1.TabIndex = 16;
             this.label1.Text = "Nome:";
             // 
-            // tabaleUsuarios
+            // tabelaUsuarios
             // 
-            this.tabaleUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabaleUsuarios.Location = new System.Drawing.Point(29, 225);
-            this.tabaleUsuarios.Name = "tabaleUsuarios";
-            this.tabaleUsuarios.Size = new System.Drawing.Size(759, 186);
-            this.tabaleUsuarios.TabIndex = 24;
+            this.tabelaUsuarios.AllowUserToAddRows = false;
+            this.tabelaUsuarios.AllowUserToDeleteRows = false;
+            this.tabelaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.tabelaUsuarios.Location = new System.Drawing.Point(29, 225);
+            this.tabelaUsuarios.Name = "tabelaUsuarios";
+            this.tabelaUsuarios.ReadOnly = true;
+            this.tabelaUsuarios.Size = new System.Drawing.Size(759, 186);
+            this.tabelaUsuarios.TabIndex = 24;
+            this.tabelaUsuarios.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tabelaUsuarios_CellMouseDoubleClick);
             // 
             // btnCadastrar
             // 
@@ -187,28 +195,37 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnImagem.Text = "Imagem";
             this.btnImagem.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureImagem
             // 
-            this.pictureBox1.Image = global::ProjetoMemoriaPrincipal_AlunosFatec.Properties.Resources.avatar;
-            this.pictureBox1.Location = new System.Drawing.Point(688, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
+            this.pictureImagem.Image = global::ProjetoMemoriaPrincipal_AlunosFatec.Properties.Resources.avatar;
+            this.pictureImagem.Location = new System.Drawing.Point(688, 12);
+            this.pictureImagem.Name = "pictureImagem";
+            this.pictureImagem.Size = new System.Drawing.Size(100, 118);
+            this.pictureImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureImagem.TabIndex = 30;
+            this.pictureImagem.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 30;
             // 
             // ListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureImagem);
             this.Controls.Add(this.btnImagem);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.tabaleUsuarios);
+            this.Controls.Add(this.tabelaUsuarios);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSenha);
@@ -219,10 +236,11 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Name = "ListaUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaUsuarios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaUsuarios_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.tabaleUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,12 +257,13 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView tabaleUsuarios;
+        private System.Windows.Forms.DataGridView tabelaUsuarios;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnImagem;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureImagem;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

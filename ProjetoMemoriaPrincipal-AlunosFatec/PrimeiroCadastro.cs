@@ -58,7 +58,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
                 this.login.Visible = true;
                 this.primeiroCadastro.Visible = false;
                 this.mudarSenha.Visible = true;
-                this.btnLogin.Location = new Point(210, 239);
+                this.btnLogin.Location = new Point(220, 239);
                 this.Close();
             }
             else

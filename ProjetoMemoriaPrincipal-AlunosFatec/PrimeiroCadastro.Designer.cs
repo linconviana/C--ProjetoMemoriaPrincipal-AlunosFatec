@@ -126,6 +126,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(123, 232);
+            this.txtTelefone.Mask = "(99) 99999-9999";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(288, 20);
             this.txtTelefone.TabIndex = 15;

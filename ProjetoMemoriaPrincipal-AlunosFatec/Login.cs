@@ -15,6 +15,15 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
         public Login()
         {
             InitializeComponent();
+
+            CarregarListaUsuarios();
+
+            ShowBtnCadastro();
+
+            txtSenha.PasswordChar = '*';
+
+            txtEmail.Text = "lincon@gmail.com";
+            txtSenha.Text = "123";
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -24,9 +33,17 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
 
             if(!String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(senha))
             {
-                ListaUsuarios listaUsuarios = new ListaUsuarios();
-                listaUsuarios.Show();
-                this.Visible = false;
+                var usuario = Global.ListaUsuarios.Find(user => user.email == email && user.senha == senha);
+                if(usuario != null)
+                {
+                    ListaUsuarios listaUsuarios = new ListaUsuarios();
+                    listaUsuarios.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Email ou senha invalidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -46,6 +63,44 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             TrocarSenha senha = new TrocarSenha(this);
             senha.Show();
             this.Visible = false;
+        }
+
+        private void ShowBtnCadastro()
+        {
+            if (Global.ListaUsuarios.Count == 0)
+                btnPrimeiroCadastro.Visible = true;
+            else
+            {
+                btnPrimeiroCadastro.Visible = false;
+                btnMudarSenha.Visible = true;
+                btnLogin.Location = new Point(220, 239);
+            }
+        }
+
+        private void CarregarListaUsuarios()
+        {
+            Global.ListaUsuarios.Add(
+                new Usuarios { id = 1, nome = "Lincon", email = "lincon@gmail.com", senha = "123", telefone = "(12) 98745-1245", imagem = string.Empty });
+            Global.ListaUsuarios.Add(
+                new Usuarios
+                {
+                    id = 2,
+                    nome = "Miriã",
+                    email = "miri@gmail.com",
+                    senha = "123",
+                    telefone = "(12) 98745-1245",
+                    imagem = @"C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\Resources\logo02.png"
+                });
+            Global.ListaUsuarios.Add(
+                new Usuarios
+                {
+                    id = 2,
+                    nome = "Heitor",
+                    email = "heitor@gmail.com",
+                    senha = "123",
+                    telefone = "(12) 98745-1245",
+                    imagem = @"C:\Users\Lincon\source\repos\ProjetoMemoriaPrincipal-AlunosFatec\ProjetoMemoriaPrincipal-AlunosFatec\Resources\logo01.png"
+                });
         }
     }
 }

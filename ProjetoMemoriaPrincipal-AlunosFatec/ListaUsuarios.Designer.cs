@@ -46,7 +46,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnImagem = new System.Windows.Forms.Button();
             this.pictureImagem = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.detalhes = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImagem)).BeginInit();
             this.SuspendLayout();
@@ -135,12 +135,13 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.tabelaUsuarios.AllowUserToDeleteRows = false;
             this.tabelaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.detalhes});
             this.tabelaUsuarios.Location = new System.Drawing.Point(29, 225);
             this.tabelaUsuarios.Name = "tabelaUsuarios";
             this.tabelaUsuarios.ReadOnly = true;
             this.tabelaUsuarios.Size = new System.Drawing.Size(759, 186);
             this.tabelaUsuarios.TabIndex = 24;
+            this.tabelaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaUsuarios_CellContentClick);
             this.tabelaUsuarios.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tabelaUsuarios_CellMouseDoubleClick);
             // 
             // btnCadastrar
@@ -152,6 +153,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnCadastrar.TabIndex = 25;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnAtualizar
             // 
@@ -163,6 +165,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnAtualizar.TabIndex = 26;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 
@@ -174,6 +177,7 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnExcluir.TabIndex = 27;
             this.btnExcluir.Text = "Exlcuir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
@@ -184,16 +188,18 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.btnLimpar.TabIndex = 28;
             this.btnLimpar.Text = "Limpar Formulario";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnImagem
             // 
             this.btnImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagem.Location = new System.Drawing.Point(694, 142);
+            this.btnImagem.Location = new System.Drawing.Point(688, 142);
             this.btnImagem.Name = "btnImagem";
-            this.btnImagem.Size = new System.Drawing.Size(94, 26);
+            this.btnImagem.Size = new System.Drawing.Size(100, 26);
             this.btnImagem.TabIndex = 29;
             this.btnImagem.Text = "Imagem";
             this.btnImagem.UseVisualStyleBackColor = true;
+            this.btnImagem.Click += new System.EventHandler(this.btnImagem_Click);
             // 
             // pictureImagem
             // 
@@ -205,14 +211,14 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.pictureImagem.TabIndex = 30;
             this.pictureImagem.TabStop = false;
             // 
-            // Column1
+            // detalhes
             // 
-            this.Column1.HeaderText = "";
-            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
-            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 30;
+            this.detalhes.HeaderText = "";
+            this.detalhes.Image = ((System.Drawing.Image)(resources.GetObject("detalhes.Image")));
+            this.detalhes.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.detalhes.Name = "detalhes";
+            this.detalhes.ReadOnly = true;
+            this.detalhes.Width = 30;
             // 
             // ListaUsuarios
             // 
@@ -264,6 +270,6 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnImagem;
         private System.Windows.Forms.PictureBox pictureImagem;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridViewImageColumn detalhes;
     }
 }

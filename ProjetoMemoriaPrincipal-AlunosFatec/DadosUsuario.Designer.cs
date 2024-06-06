@@ -38,8 +38,8 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureImagem = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,23 +140,23 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.lblSenha.TabIndex = 8;
             this.lblSenha.Text = "....";
             // 
-            // pictureBox1
+            // pictureImagem
             // 
-            this.pictureBox1.Image = global::ProjetoMemoriaPrincipal_AlunosFatec.Properties.Resources.avatar;
-            this.pictureBox1.Location = new System.Drawing.Point(500, 95);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 134);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureImagem.Image = global::ProjetoMemoriaPrincipal_AlunosFatec.Properties.Resources.avatar;
+            this.pictureImagem.Location = new System.Drawing.Point(500, 95);
+            this.pictureImagem.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureImagem.Name = "pictureImagem";
+            this.pictureImagem.Size = new System.Drawing.Size(110, 134);
+            this.pictureImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureImagem.TabIndex = 9;
+            this.pictureImagem.TabStop = false;
             // 
             // DadosUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 390);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureImagem);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblEmail);
@@ -167,12 +167,12 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DadosUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DadosUsuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DadosUsuario_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +189,6 @@ namespace ProjetoMemoriaPrincipal_AlunosFatec
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureImagem;
     }
 }
